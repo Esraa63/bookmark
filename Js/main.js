@@ -90,7 +90,7 @@ function validationRegexName(){
 
 function validationRegexUrl(){
    var textUrl=urlInput.value;
-   var regexUrl=/^(http:\/\/|https:\/\/)?(www\.)[a-zA-Z\d]{2,}\.?[a-zA-Z\d]+\.(com|org|edu|net|gov|info|co|tech)$/;
+   var regexUrl=/^(http:\/\/|https:\/\/)?(www\.)[a-zA-Z\d]{2,}\.?[a-zA-Z\d]+\.(com|org|edu|net|gov|info|co|tech)$/i;
    if(regexUrl.test(textUrl)==true){
     urlInput.classList.add("is-valid");
     urlInput.classList.remove("is-invalid");
