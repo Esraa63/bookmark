@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <main class="py-5">
+        <div class="container ">
+            <h1 class="text-center mx-auto position-relative z-1">Bookmarker</h1>
+          <!--  -->
+    <!-- Modal HTML -->
+
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-start align-items-center mb-2">
+                    <span class="rounded-circle me-2" style="background-color: #c51a1a !important;" ></span>
+                    <span class="rounded-circle me-2" style="background-color: yellow !important;"></span>
+                    <span class="rounded-circle me-2" style="background-color: green !important;"></span>
+                    </div>
+                    
+                    <p><strong>Site Name or Url is not valid, Please follow the rules below:</strong></p>
+                    <p ><i class="fa-regular fa-circle-right p-2" style="color: #c51a1a;"></i><small>Site name must contain at least 3 characters</small></p>
+                    <p ><i class="fa-regular fa-circle-right p-2" style="color: #c51a1a;"></i><small>Site URL must be a valid one</small></p>
+                </div>
+                <div class="modal-footer">
+                    <buttontype="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</buttontype=>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+          <!--  -->
+            <div class="w-100 borderdashed p-3 d-flex flex-column justify-content-center align-items-center gap-2">
+                       <h3 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+          
+                   <div class="mb-3 w-100">
+                    <label for="bookmarkName" class="pb-2">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name</label> 
+                      <input oninput="validationRegexName();" type="text"  placeholder="Bookmark Name" class="form-control"  id="bookmarkName" />
+                   </div>
+
+                   <div class="mb-3 w-100">
+                    <label for="bookmarkUrl" class="pb-2">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Url</label> 
+                      <input oninput="validationRegexUrl();" type="text"  placeholder="Website URL" class="form-control"  id="bookmarkUrl" />
+                   </div>
+                   <button  class="btn px-5 button" onclick="addBookmark();">Submit</button>
+            </div>
+
+            <div class="mt-5">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <td>Index</td>
+                            <td>Website Name</td>
+                            <td>Visit</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="bookmarkListDisplay">    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src= "Js/bootstrap.bundle.min.js"> </script> 
+    <script src="Js/main.js"></script>
+</body>
+</html>
